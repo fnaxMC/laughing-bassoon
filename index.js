@@ -44,9 +44,9 @@ const puppeteer = require("puppeteer");
     if (Math.floor(Math.random() * 3) + 1 === 1) {
       setTimeout(() => {
         TypeCommand(page, "!dep all");
-      }, 5000);
+      }, config.slowmode);
     }
-  }, 30 * 1000);
+  }, config.workTimeout);
 })();
 
 const TypeCommand = async (page, command) => {
