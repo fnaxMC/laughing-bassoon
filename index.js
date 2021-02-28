@@ -41,7 +41,7 @@ const puppeteer = require("puppeteer");
   });
   setInterval(() => {
     TypeCommand(page, "!work");
-    if (Math.floor(Math.random() * 3) + 1 === 1) {
+    if (Math.floor(Math.random() * config.depallChance) + 1 === 1) {
       setTimeout(() => {
         TypeCommand(page, "!dep all");
       }, config.slowmode);
@@ -54,5 +54,5 @@ const TypeCommand = async (page, command) => {
     document.querySelector(".slateTextArea-1Mkdgw").click();
   });
   await page.keyboard.type(command);
-  page.keyboard.press("Enter");
+  await page.keyboard.press("Enter");
 };

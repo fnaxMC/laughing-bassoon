@@ -3,5 +3,6 @@
   "url": "https://discord.com/channels/788098370308014171/808957743506391051",
   "headless": true,
   "slowmode":6000,
+  "depallChance":3,
   "workTimeout":30000
 }
