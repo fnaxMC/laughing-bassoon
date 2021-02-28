@@ -41,7 +41,7 @@ const puppeteer = require("puppeteer");
   });
   setInterval(() => {
     TypeCommand(page, "!work");
-    if (Math.floor(Math.random() * config.depallChance) + 1 === 1) {
+    if (Random(1, config.depallChance) === 1) {
       setTimeout(() => {
         TypeCommand(page, "!dep all");
       }, config.slowmode);
@@ -56,3 +56,5 @@ const TypeCommand = async (page, command) => {
   await page.keyboard.type(command);
   await page.keyboard.press("Enter");
 };
+
+const Random = (min, max) => min + Math.floor(Math.random() * max);
