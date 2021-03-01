@@ -1,0 +1,23 @@
+{
+  "name": "laughing-bassoon",
+  "version": "1.1.0",
+  "description": "rzuf tube stonks!",
+  "main": "index.js",
+  "dependencies": {
+    "puppeteer": "^1.11.0-next.1547527073587"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fnaxMC/laughing-bassoon.git"
+  },
+  "author": "fnax, ketok",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/fnaxMC/laughing-bassoon/issues"
+  },
+  "homepage": "https://github.com/fnaxMC/laughing-bassoon#readme"
+}
