@@ -36,7 +36,7 @@ console.log(`Starting bot with config file '${configFile}'`);
 
     localStorage.setItem("token", config.token);
   }, config);
-  console.log("Bot stared");
+  console.log("Bot started");
   await page.goto(config.url, { waitUntil: ["load", "domcontentloaded"] });
 
   await page.waitForSelector(".slateTextArea-1Mkdgw", {
