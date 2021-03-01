@@ -1,13 +1,15 @@
-const config = require("./config.json");
 const puppeteer = require("puppeteer");
 
+const args = process.argv;
+
+const configFile = args.length < 3 ? "config.json" : args[2];
+
+const config = require("./" + configFile);
+
+console.log(`Starting bot with config file ${configFile}`);
+
 (async () => {
-  let browser;
-  if (config.headless) {
-    browser = await puppeteer.launch({ headless: true });
-  } else {
-    browser = await puppeteer.launch({ headless: false });
-  }
+  let browser = await puppeteer.launch({ headless: config.headless });
 
   const page = await browser.newPage();
   await page.goto("https://discord.com/app");
@@ -34,6 +36,7 @@ const puppeteer = require("puppeteer");
 
     localStorage.setItem("token", config.token);
   }, config);
+  console.log("Bot stared");
   await page.goto(config.url, { waitUntil: ["load", "domcontentloaded"] });
 
   await page.waitForSelector(".slateTextArea-1Mkdgw", {
