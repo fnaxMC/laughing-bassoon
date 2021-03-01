@@ -41,10 +41,15 @@ const puppeteer = require("puppeteer");
   });
   setInterval(() => {
     TypeCommand(page, "!work");
-    if (Random(1, config.depallChance) === 1) {
+    if (Random(0, config.depallChance) === 0) {
       setTimeout(() => {
         TypeCommand(page, "!dep all");
       }, config.slowmode);
+      if (Random(0, config.balChanceAfterDepall) === 0) {
+        setTimeout(() => {
+          TypeCommand(page, "!bal");
+        }, config.slowmode);
+      }
     }
   }, config.workTimeout);
 })();
@@ -57,4 +62,4 @@ const TypeCommand = async (page, command) => {
   await page.keyboard.press("Enter");
 };
 
-const Random = (min, max) => min + Math.floor(Math.random() * max);
+const Random = (min, max) => min + Math.floor(Math.random() * (max - min));

@@ -1,8 +1,9 @@
 {
   "token": "\"\"",
-  "url": "",
+  "url": "https://discord.com/channels/788098370308014171/808957743506391051",
   "headless": true,
   "slowmode":7000,
   "depallChance":3,
+  "balChanceAfterDepall":2,
   "workTimeout":30000
 }
