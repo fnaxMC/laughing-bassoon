@@ -7,5 +7,6 @@ Bot który pozwoli ci zautomatyzować ekonomię bota
 4. podaj tam swój token discord, url kanału na którym chcesz wysyłać komendy i inne 
 5. komendą `npm i` zainstaluj wszystkie potrzebne zależności 
 6. komendą `node start.js`uruchom bota
-**Jak dodać więcej botów**
+
+**Jak dodać więcej botów?**
 Aby dodać więcej botów musisz stworzyć nowy plik konfiguracyjny i uruchomić bota komendą `node start.js nazwa_pliku_konfiguracyjnego.json`
