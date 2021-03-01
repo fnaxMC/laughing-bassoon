@@ -15,9 +15,9 @@ console.log(`Giving money to main account with config file '${configFile}'`);
 
   console.log("Bot started!");
 
-  bot.typeCommand("!with all");
+  await bot.typeCommand("!with all");
   setTimeout(() => {
-    bot.typeCommand("!give-money @_Marsek#8334 all");
+    await bot.typeCommand("!give-money @_Marsek#8334 all");
     process.exit();
   }, config.slowmode);
 })();
