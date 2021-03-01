@@ -1,6 +1,6 @@
 const puppeteer = require("puppeteer");
 
-let page
+let page;
 
 const start = async (config) => {
   let browser = await puppeteer.launch({ headless: config.headless });
@@ -46,9 +46,6 @@ const typeCommand = async (command) => {
   await page.keyboard.press("Enter");
   console.log(`Sended message '${command}'`);
 };
-
-const random = (min, max) => min + Math.floor(Math.random() * (max - min));
-
 
 module.exports.start = start;
 module.exports.typeCommand = typeCommand;
