@@ -6,7 +6,7 @@ const configFile = args.length < 3 ? "config.json" : args[2];
 
 const config = require("./" + configFile);
 
-console.log(`Starting bot with config file ${configFile}`);
+console.log(`Starting bot with config file '${configFile}'`);
 
 (async () => {
   let browser = await puppeteer.launch({ headless: config.headless });
@@ -63,6 +63,7 @@ const TypeCommand = async (page, command) => {
   });
   await page.keyboard.type(command);
   await page.keyboard.press("Enter");
+  console.log(`Sended message '${command}'`);
 };
 
 const Random = (min, max) => min + Math.floor(Math.random() * (max - min));
