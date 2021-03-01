@@ -44,12 +44,12 @@ const puppeteer = require("puppeteer");
     if (Random(0, config.depallChance) === 0) {
       setTimeout(() => {
         TypeCommand(page, "!dep all");
+        if (Random(0, config.balChanceAfterDepall) === 0) {
+          setTimeout(() => {
+            TypeCommand(page, "!bal");
+          }, config.slowmode);
+        }
       }, config.slowmode);
-      if (Random(0, config.balChanceAfterDepall) === 0) {
-        setTimeout(() => {
-          TypeCommand(page, "!bal");
-        }, config.slowmode);
-      }
     }
   }, config.workTimeout);
 })();
