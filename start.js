@@ -1,5 +1,3 @@
-const puppeteer = require("puppeteer");
-
 const args = process.argv;
 
 const configFile = args.length < 3 ? "config.json" : args[2];
@@ -11,7 +9,7 @@ console.log(`Starting bot with config file '${configFile}'`);
 (async () => {
   let bot = require("./bot.js");
 
-  bot.start(config);
+  await bot.start(config);
 
   console.log("Bot started!");
 
