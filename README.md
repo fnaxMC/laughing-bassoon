@@ -9,4 +9,5 @@ Bot który pozwoli ci zautomatyzować ekonomię bota
 6. komendą `node start.js`uruchom bota
 
 **Jak dodać więcej botów?**
+
 Aby dodać więcej botów musisz stworzyć nowy plik konfiguracyjny i uruchomić bota komendą `node start.js nazwa_pliku_konfiguracyjnego.json`
